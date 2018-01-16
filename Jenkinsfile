@@ -1,6 +1,6 @@
 node {
     stage('Prep') {
-        sh ls
+        sh "ls"
     }
     stage('Build') {
         sh "docker build -t simple_date ."

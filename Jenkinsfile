@@ -1,4 +1,8 @@
 node {
-    docker build -t simple_date .
-    docker rmi simple_date
+    stage('Build') {
+        sh "docker build -t simple_date ."
+    }
+    stage('Run') {
+        sh "docker run --rm simple_date"
+    }
 }

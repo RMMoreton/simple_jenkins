@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                git url: 'https://github.com/RMMoreton/simple_jenkins/'
-            }
-        }
         stage('Build') {
             steps {
                 sh "docker build -t simple_date ."

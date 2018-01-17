@@ -6,6 +6,6 @@ node {
         sh "docker build -t simple_date ."
     }
     stage('Run') {
-        sh "docker run --rm simple_date"
+        sh "docker run --rm simple_date '2015-01-05T01:23:45+00:01'"
     }
 }

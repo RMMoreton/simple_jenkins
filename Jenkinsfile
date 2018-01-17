@@ -1,6 +1,6 @@
 node {
-    stage('Prep') {
-        sh "pwd"
+    stage('Clone') {
+        git url: 'https://github.com/RMMoreton/simple_jenkins/'
     }
     stage('Build') {
         sh "docker build -t simple_date ."

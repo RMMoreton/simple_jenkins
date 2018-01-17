@@ -8,4 +8,7 @@ node {
     stage('Run') {
         sh "docker run --rm simple_date python app.py -t '${datetime}'"
     }
+    stage('Clean') {
+        sh "docker rmi simple_date"
+    }
 }

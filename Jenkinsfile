@@ -3,5 +3,11 @@ pipeline {
         dockerfile true
     }
 
-    stages {}
+    stages {
+        stage('Blank') {
+            steps {
+                sh 'ls'
+            }
+        }
+    }
 }
